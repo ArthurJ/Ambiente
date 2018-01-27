@@ -1,6 +1,6 @@
 sudo apt --fix-broken install
 
-sudo dpkg -i -R debs # Instala os debs contidos na pasta
+# sudo dpkg -i -R debs # Instala os debs contidos na pasta
 
 # sudo apt-add-repository ppa:danielrichter2007/grub-customizer -y
 sudo add-apt-repository ppa:git-core/ppa -y
@@ -10,14 +10,22 @@ sudo add-apt-repository ppa:neovim-ppa/stable -y
 
 # echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
 # sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
-# sudo apt-get install \
+
+
+sudo apt-get update -y && sudo apt-get dist-upgrade -y
+
+# sudo apt install \
 # sbt \
+
 # ruby-full \
+
+# fingerprint-gui \
+# policykit-1-fingerprint-gui \
+# libbsapi \
+
 # -y
 
-sudo apt-get update && sudo apt-get dist-upgrade
-
-sudo apt-get install \
+sudo apt install \
 arj \
 arp-scan \
 cabextract \
@@ -34,11 +42,9 @@ gcc \
 git \
 gparted \
 grub-customizer \
-fingerprint-gui \
 gedit-plugins \
 hddtemp \
 htop \
-libbsapi \
 libdvdread4 \
 libreoffice \
 lm-sensors \
@@ -57,19 +63,16 @@ p7zip \
 p7zip-full \
 p7zip-rar \
 pgadmin3 \
-policykit-1-fingerprint-gui \
-postgresql \
--y
+postgresql -y
 
-sudo apt-get install \
+sudo apt install \
 python-dev \
 python-docutils \
 python-pip \
-python-virtualenv \
--y
+python-virtualenv -y
 
 
-sudo apt-get install \
+sudo apt install \
 python3 \
 python3-numpy \
 python3-pip \
@@ -81,7 +84,6 @@ rar \
 screen \
 sharutils \
 sqlformat \
-subversion \
 terminator \
 tortoisehg \
 traceroute \
@@ -97,25 +99,23 @@ unrar \
 unzip \
 usb-creator-gtk \
 uudeview \
-vim \
 xclip \
 zip \
-zsh \
--y
+zsh -y
 
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
 
-# pip install selenium
-# pip install pdfminer
+# pip  install selenium 
+# pip  install pdfminer
 
-pip3 install autopep8
-pip3 install ipython
-pip3 install nltk
-pip3 install neovim
-pip3 install pyzabbix
-pip3 install jupyter
-pip3 install pydotplus
+pip3  install autopep8  
+pip3  install ipython 
+pip3  install nltk   
+pip3  install neovim  
+pip3  install pyzabbix  
+pip3  install jupyter  
+pip3  install pydotplus  
 
 #------------------------------------------------------------------------------
 
@@ -166,6 +166,3 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
-
-
-
