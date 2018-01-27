@@ -37,7 +37,9 @@ gtk2-engines-murrine \
 paper-icon-theme \
 libglib2.0-dev \
 libxml2-utils \
+gnome-themes-standard \
 paper-cursor-theme -y
+sudo apt install paper-gtk-theme -y
 
 
 sudo apt install \
@@ -160,7 +162,8 @@ firefox -newtab \
 -url "https://www.jetbrains.com/pycharm/download/#section=linux" \
 -url "https://www.jetbrains.com/idea/download/#section=linux" \
 -url "https://spark.apache.org/downloads.html" \
--url "https://www.yworks.com/downloads#yEd"
+-url "https://www.yworks.com/downloads#yEd" \
+-url "https://snwh.org/paper/download"
 
 sudo chsh $(whoami) -s  $(which zsh)
 
