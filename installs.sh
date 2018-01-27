@@ -1,11 +1,15 @@
+# NÃO EXECUTAR COM SUDO
+
 sudo apt --fix-broken install
 
-# sudo dpkg -i -R debs # Instala os debs contidos na pasta
+sudo dpkg -i -R debs # Instala os debs contidos na pasta
 
 # sudo apt-add-repository ppa:danielrichter2007/grub-customizer -y
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo add-apt-repository ppa:neovim-ppa/stable -y
 # sudo add-apt-repository ppa:fingerprint/fingerprint-gui -y
+
+sudo add-apt-repository ppa:snwh/pulp # Paper Theme
 
 
 # echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
@@ -23,7 +27,18 @@ sudo apt-get update -y && sudo apt-get dist-upgrade -y
 # policykit-1-fingerprint-gui \
 # libbsapi \
 
+# chromium-browser \
+# grub-customizer \
+
 # -y
+
+sudo apt install \
+gtk2-engines-murrine \
+paper-icon-theme \
+libglib2.0-dev \
+libxml2-utils \
+paper-cursor-theme -y
+
 
 sudo apt install \
 arj \
@@ -31,7 +46,6 @@ arp-scan \
 cabextract \
 calibre \
 cheese \
-chromium-browser \
 conky \
 conky-all \
 cowsay \
@@ -41,7 +55,6 @@ file-roller \
 gcc \
 git \
 gparted \
-grub-customizer \
 gedit-plugins \
 hddtemp \
 htop \
@@ -166,3 +179,7 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
+
+cd /tmp && wget -qO - https://github.com/nana-4/materia-theme/archive/master.tar.gz | tar xz
+cd materia-theme-master
+sudo ./install.sh
