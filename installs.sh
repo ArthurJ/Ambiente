@@ -4,41 +4,25 @@ sudo apt --fix-broken install
 
 sudo dpkg -i -R debs # Instala os debs contidos na pasta
 
-# sudo apt-add-repository ppa:danielrichter2007/grub-customizer -y
+sudo apt-add-repository ppa:danielrichter2007/grub-customizer -y
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo add-apt-repository ppa:neovim-ppa/stable -y
-# sudo add-apt-repository ppa:fingerprint/fingerprint-gui -y
 
 sudo add-apt-repository ppa:snwh/pulp # Paper Theme
 
-
-# echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
-# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
-
-
 sudo apt-get update -y && sudo apt-get dist-upgrade -y
 
-# sudo apt install \
-# sbt \
-
-# ruby-full \
-
-# fingerprint-gui \
-# policykit-1-fingerprint-gui \
-# libbsapi \
-
-# chromium-browser \
-# grub-customizer \
-
-# -y
 
 sudo apt install \
+grub-customizer \
 gtk2-engines-murrine \
 paper-icon-theme \
 libglib2.0-dev \
 libxml2-utils \
 gnome-themes-standard \
 paper-cursor-theme -y
+
+
 sudo apt install paper-gtk-theme -y
 
 
@@ -48,8 +32,6 @@ arp-scan \
 cabextract \
 calibre \
 cheese \
-conky \
-conky-all \
 cowsay \
 curl \
 figlet \
@@ -76,9 +58,7 @@ openssh-server \
 openvpn \
 p7zip \
 p7zip-full \
-p7zip-rar \
-pgadmin3 \
-postgresql -y
+p7zip-rar -y
 
 sudo apt install \
 python-dev \
@@ -93,8 +73,6 @@ python3-numpy \
 python3-pip \
 python-setuptools \
 python3-setuptools \
-r-base \
-r-base-dev \
 rar \
 screen \
 sharutils \
@@ -121,16 +99,17 @@ zsh -y
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
 
-# pip  install selenium 
+# pip  install selenium
 # pip  install pdfminer
 
-pip3  install autopep8  
-pip3  install ipython 
-pip3  install nltk   
-pip3  install neovim  
-pip3  install pyzabbix  
-pip3  install jupyter  
-pip3  install pydotplus  
+pip3  install autopep8
+pip3  install ipython
+pip3  install neovim
+pip3  install jupyter
+
+#pip3  install pydotplus
+#pip3  install nltk
+#pip3  install pyzabbix
 
 #------------------------------------------------------------------------------
 
@@ -142,9 +121,6 @@ cd ~/Stuff/Downloads
 wget https://repo.continuum.io/archive
 export ANACONDA=`cat index.html | grep Anaconda3 | grep Linux-x86_64 | sort  | tail -n 1 | lynx -dump -nolist -stdin | awk '{print $1}' | head -n 1`
 wget https://repo.continuum.io/archive/$ANACONDA
-
-# export GOVERSION=`curl -s  https://storage.googleapis.com/golang | lynx -dump -stdin  | tr '>' '\n' | grep -Eo "go.\..\..\.linux-amd64.tar.gz" | sort -n | tail -n 1`
-# curl -Os https://storage.googleapis.com/golang/$GOVERSION
 
 
 cd ~
@@ -162,8 +138,8 @@ firefox -newtab \
 -url "https://www.jetbrains.com/pycharm/download/#section=linux" \
 -url "https://www.jetbrains.com/idea/download/#section=linux" \
 -url "https://spark.apache.org/downloads.html" \
--url "https://www.yworks.com/downloads#yEd" \
 -url "https://snwh.org/paper/download"
+-url "https://www.opera.com/pt/computer/linux"
 
 sudo chsh $(whoami) -s  $(which zsh)
 
