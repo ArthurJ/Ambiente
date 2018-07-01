@@ -1,0 +1,6 @@
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'maralla/completor.vim'
+Plug 'cocopon/iceberg.vim'
+Plug 'severin-lemaignan/vim-minimap'
+Plug 'luochen1990/rainbow'
+Plug 'w0rp/ale'
