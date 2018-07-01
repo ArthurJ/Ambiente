@@ -127,15 +127,16 @@ cd ~
 #-----------------------------------------------------------------------------
 
 mkdir -p ~/.config/nvim
-curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=javascript&langs=c&langs=html&langs=ruby&langs=elixir&langs=erlang&langs=go&langs=haskell&langs=lisp&langs=lua&langs=python&langs=ruby&langs=rust&editor=nvim' > ~/.config/nvim/init.vim
+curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=javascript&langs=c&langs=html&langs=elixir&langs=erlang&langs=haskell&langs=lisp&langs=lua&langs=python&langs=rust&editor=nvim' > ~/.config/nvim/init.vim
 
-cp ~/Ambiente/local_bundles.vim ~/.config/nvim
-cp ~/Ambiente/personal.vim ~/.config/nvim
+cp ~/Ambiente/local_bundles.vim ~/.config/nvim/
+cp ~/Ambiente/personal.vim ~/.config/nvim/
 
 echo '' >> ~/.config/nvim/init.vim
 echo 'if filereadable(expand("~/personal.vim"))' >> ~/.config/nvim/init.vim
 echo '  source ~/personal.vim' >> ~/.config/nvim/init.vim
 echo 'endif' >> ~/.config/nvim/init.vim
+#-----------------------------------------------------------------------------
 
 firefox -newtab \
 -url "https://filezilla-project.org/download.php?type=client" \
