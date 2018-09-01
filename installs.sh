@@ -8,7 +8,7 @@ sudo apt-add-repository ppa:danielrichter2007/grub-customizer -y
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo add-apt-repository ppa:neovim-ppa/stable -y
 
-sudo add-apt-repository ppa:snwh/pulp # Paper Theme
+sudo add-apt-repository ppa:snwh/ppa # Paper Theme
 
 sudo apt-get update -y && sudo apt-get dist-upgrade -y
 
