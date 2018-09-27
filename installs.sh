@@ -10,24 +10,17 @@ sudo add-apt-repository ppa:neovim-ppa/stable -y
 
 sudo add-apt-repository ppa:snwh/ppa # Paper Theme
 
+sudo sh -c 'echo "deb http://deb.opera.com/opera-stable/ stable non-free" >> /etc/apt/sources.list.d/opera.list'
+wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -
+
+
 sudo apt-get update -y && sudo apt-get dist-upgrade -y
 
 
 sudo apt install \
-grub-customizer \
-gtk2-engines-murrine \
-paper-icon-theme \
-libglib2.0-dev \
-libxml2-utils \
-gnome-themes-standard \
-paper-cursor-theme -y
-
-
-sudo apt install paper-gtk-theme -y
-
-
-sudo apt install \
 arj \
+autokey-common \
+autokey-gtk \
 arp-scan \
 cabextract \
 calibre \
@@ -58,7 +51,21 @@ openssh-server \
 openvpn \
 p7zip \
 p7zip-full \
+postfix \
 p7zip-rar -y
+
+
+sudo apt install \
+grub-customizer \
+opera-stable \
+gtk2-engines-murrine \
+paper-icon-theme \
+libglib2.0-dev \
+libxml2-utils \
+gnome-themes-standard \
+paper-cursor-theme \
+paper-gtk-theme -y
+
 
 sudo apt install \
 python-dev \
@@ -113,7 +120,6 @@ pip3  install jupyter
 
 #------------------------------------------------------------------------------
 
-mkdir -p ~/Stuff
 mkdir -p ~/Stuff/Downloads
 
 #------------------------------------------------------------------------------
