@@ -17,91 +17,76 @@ wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -
 sudo apt-get update -y && sudo apt-get dist-upgrade -y
 
 
-sudo apt install \
-arj \
-autokey-common \
-autokey-gtk \
-arp-scan \
-cabextract \
-calibre \
-cheese \
-cowsay \
-curl \
-figlet \
-file-roller \
-gcc \
-git \
-gparted \
-gedit-plugins \
-hddtemp \
-htop \
-libdvdread4 \
-libreoffice \
-lm-sensors \
-lynx \
-meld \
-mpack \
-ncurses-term \
-ntfs-3g \
-neovim \
-network-manager-openvpn \
-network-manager-openvpn-gnome \
-nmap \
-openssh-server \
-openvpn \
-p7zip \
-p7zip-full \
-postfix \
-p7zip-rar -y
+sudo apt install arj -y
+sudo apt install autokey-common -y
+sudo apt install autokey-gtk -y
+sudo apt install arp-scan -y
+sudo apt install cabextract -y
+sudo apt install calibre -y
+sudo apt install cheese -y
+sudo apt install cowsay -y
+sudo apt install curl -y
+sudo apt install figlet -y
+sudo apt install file-roller -y
+sudo apt install gcc -y
+sudo apt install git -y
+sudo apt install gparted -y
+sudo apt install gedit-plugins -y
+sudo apt install hddtemp -y
+sudo apt install htop -y
+sudo apt install libdvdread4 -y
+sudo apt install libreoffice -y
+sudo apt install lm-sensors -y
+sudo apt install lynx -y
+sudo apt install meld -y
+sudo apt install mpack -y
+sudo apt install ncurses-term -y
+sudo apt install ntfs-3g -y
+sudo apt install neovim -y
+sudo apt install network-manager-openvpn -y
+sudo apt install network-manager-openvpn-gnome -y
+sudo apt install nmap -y
+sudo apt install openssh-server -y
+sudo apt install openvpn -y
+sudo apt install p7zip -y
+sudo apt install p7zip-full -y
+sudo apt install postfix -y
+sudo apt install p7zip-rar -y
+sudo apt-get install gnome-tweak-tool -y
 
+sudo apt install grub-customizer -y
+sudo apt install opera-stable -y
+sudo apt install gtk2-engines-murrine -y
+sudo apt install libglib2.0-dev -y
+sudo apt install libxml2-utils -y
+sudo apt install gnome-themes-standard -y
 
-sudo apt install \
-grub-customizer \
-opera-stable \
-gtk2-engines-murrine \
-paper-icon-theme \
-libglib2.0-dev \
-libxml2-utils \
-gnome-themes-standard \
-paper-cursor-theme \
-paper-gtk-theme -y
+sudo apt install paper-icon-theme -y
 
+sudo apt install python-dev python-docutils python-pip python-virtualenv -y
+sudo apt install python3 python3-numpy python3-pip python-setuptools python3-setuptools -y
 
-sudo apt install \
-python-dev \
-python-docutils \
-python-pip \
-python-virtualenv -y
+sudo apt install rar -y
+sudo apt install screen  -y
+sudo apt install sharutils -y
+sudo apt install sqlformat -y
+sudo apt install terminator -y
+sudo apt install tortoisehg -y
+sudo apt install traceroute -y
+sudo apt install transmission transmission-gtk  -y
+sudo apt install trash-cli -y
+sudo apt install tree -y
 
+sudo apt install ttf-dejavu ttf-mscorefonts-installer ttf-xfree86-nonfree -y
 
-sudo apt install \
-python3 \
-python3-numpy \
-python3-pip \
-python-setuptools \
-python3-setuptools \
-rar \
-screen \
-sharutils \
-sqlformat \
-terminator \
-tortoisehg \
-traceroute \
-transmission \
-transmission-gtk \
-trash-cli \
-tree \
-ttf-dejavu \
-ttf-mscorefonts-installer \
-ttf-xfree86-nonfree \
-unace \
-unrar \
-unzip \
-usb-creator-gtk \
-uudeview \
-xclip \
-zip \
-zsh -y
+sudo apt install unace -y
+sudo apt install unrar -y
+sudo apt install unzip -y
+sudo apt install usb-creator-gtk -y
+sudo apt install uudeview -y
+sudo apt install xclip -y
+sudo apt install zip -y
+sudo apt install zsh -y
 
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
