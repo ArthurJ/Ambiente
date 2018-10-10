@@ -52,10 +52,12 @@ sudo apt install p7zip -y
 sudo apt install p7zip-full -y
 sudo apt install postfix -y
 sudo apt install p7zip-rar -y
+sudo apt install opera-stable -y
+
 sudo apt-get install gnome-tweak-tool -y
+sudo apt-get install chrome-gnome-shell -y
 
 sudo apt install grub-customizer -y
-sudo apt install opera-stable -y
 sudo apt install gtk2-engines-murrine -y
 sudo apt install libglib2.0-dev -y
 sudo apt install libxml2-utils -y
@@ -139,6 +141,13 @@ firefox -newtab \
 -url "https://spark.apache.org/downloads.html" \
 -url "https://snwh.org/paper/download"
 -url "https://www.opera.com/pt/computer/linux"
+
+opera https://extensions.gnome.org
+opera https://extensions.gnome.org/extension/19/user-themes/
+opera https://extensions.gnome.org/extension/7/removable-drive-menu/
+opera https://extensions.gnome.org/extension/1036/extensions/
+opera https://extensions.gnome.org/extension/750/openweather/
+opera https://extensions.gnome.org/extension/906/sound-output-device-chooser/
 
 sudo chsh $(whoami) -s  $(which zsh)
 
