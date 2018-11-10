@@ -4,9 +4,9 @@ sudo apt --fix-broken install
 
 sudo dpkg -i -R debs # Instala os debs contidos na pasta
 
-sudo apt-add-repository ppa:danielrichter2007/grub-customizer -y
-sudo add-apt-repository ppa:git-core/ppa -y
-sudo add-apt-repository ppa:neovim-ppa/stable -y
+sudo apt-add-repository ppa:danielrichter2007/grub-customizer
+sudo add-apt-repository ppa:git-core/ppa
+sudo add-apt-repository ppa:neovim-ppa/stable
 
 sudo add-apt-repository ppa:snwh/ppa # Paper Theme
 
@@ -143,11 +143,11 @@ firefox -newtab \
 -url "https://www.opera.com/pt/computer/linux"
 
 opera https://extensions.gnome.org
-opera https://extensions.gnome.org/extension/19/user-themes/
-opera https://extensions.gnome.org/extension/7/removable-drive-menu/
-opera https://extensions.gnome.org/extension/1036/extensions/
-opera https://extensions.gnome.org/extension/750/openweather/
-opera https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+opera https://extensions.gnome.org/extension/19/user-themes/ &
+opera https://extensions.gnome.org/extension/7/removable-drive-menu/ &
+opera https://extensions.gnome.org/extension/1036/extensions/ &
+opera https://extensions.gnome.org/extension/750/openweather/ &
+opera https://extensions.gnome.org/extension/906/sound-output-device-chooser/ &
 
 sudo chsh $(whoami) -s  $(which zsh)
 
