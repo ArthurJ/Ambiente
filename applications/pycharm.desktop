@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Pycharm
+Exec=/home/arthur/Stuff/pycharm-2018.3.2/bin/pycharm.sh
+Icon=/home/arthur/Stuff/pycharm-2018.3.2/bin/pycharm.png
+Terminal=false
+Name[en_US]=pycharm.desktop

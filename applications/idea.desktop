@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=IntelliJ Idea
+Exec=/home/arthur/Stuff/ideaIU-2018.3.2/bin/idea.sh
+Icon=/home/arthur/Stuff/ideaIU-2018.3.2/bin/idea.png
+Terminal=false
+Name[en_US]=idea.desktop

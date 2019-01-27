@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Anaconda
+Exec=/home/arthur/Stuff/anaconda3/bin/anaconda-navigator
+Icon=/home/arthur/Stuff/anaconda3/anaconda-icon.png
+Terminal=false
+Name[en_US]=anaconda.desktop

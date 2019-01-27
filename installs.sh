@@ -10,9 +10,6 @@ sudo add-apt-repository ppa:neovim-ppa/stable
 
 sudo add-apt-repository ppa:snwh/ppa # Paper Theme
 
-sudo sh -c 'echo "deb http://deb.opera.com/opera-stable/ stable non-free" >> /etc/apt/sources.list.d/opera.list'
-wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -
-
 
 sudo apt-get update -y && sudo apt-get dist-upgrade -y
 
@@ -66,7 +63,6 @@ sudo apt install gnome-themes-standard -y
 sudo apt install paper-icon-theme -y
 
 sudo apt install python-dev python-docutils python-pip python-virtualenv -y
-sudo apt install python3 python3-numpy python3-pip python-setuptools python3-setuptools -y
 
 sudo apt install rar -y
 sudo apt install screen  -y
@@ -93,17 +89,12 @@ sudo apt install zsh -y
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
 
-# pip  install selenium
-# pip  install pdfminer
-
 pip3  install autopep8
-pip3  install ipython
 pip3  install neovim
-pip3  install jupyter
 
-#pip3  install pydotplus
-#pip3  install nltk
-#pip3  install pyzabbix
+#-----------------------------------------------------------------------------
+# Copia dos .desktop files
+cp applications/* ~/.local/share/applications
 
 #------------------------------------------------------------------------------
 
@@ -112,7 +103,7 @@ mkdir -p ~/Stuff/Downloads
 #------------------------------------------------------------------------------
 cd ~/Stuff/Downloads
 wget https://repo.continuum.io/archive
-export ANACONDA=`cat index.html | grep Anaconda3 | grep Linux-x86_64 | sort  | tail -n 1 | lynx -dump -nolist -stdin | awk '{print $1}' | head -n 1`
+export ANACONDA=`cat index.html | grep Anaconda3 | grep Linux-x86_64 | sort | lynx -dump -nolist -stdin | awk 'BEGIN{RS=" "} 1' | grep $(date '+%Y.%m')`
 wget https://repo.continuum.io/archive/$ANACONDA
 
 
@@ -139,15 +130,17 @@ firefox -newtab \
 -url "https://www.jetbrains.com/pycharm/download/#section=linux" \
 -url "https://www.jetbrains.com/idea/download/#section=linux" \
 -url "https://spark.apache.org/downloads.html" \
--url "https://snwh.org/paper/download"
--url "https://www.opera.com/pt/computer/linux"
+-url "https://snwh.org/paper/download" \
+-url "https://www.gitkraken.com/download/linux-deb" \
+-url "https://www.torproject.org/download/download-easy.html.en" \
+-url "https://extensions.gnome.org" \
+-url "https://extensions.gnome.org/extension/19/user-themes/" \
+-url "https://extensions.gnome.org/extension/7/removable-drive-menu/" \
+-url "https://extensions.gnome.org/extension/1036/extensions/" \
+-url "https://extensions.gnome.org/extension/750/openweather/" \
+-url "https://extensions.gnome.org/extension/906/sound-output-device-chooser/"
 
-opera https://extensions.gnome.org
-opera https://extensions.gnome.org/extension/19/user-themes/ &
-opera https://extensions.gnome.org/extension/7/removable-drive-menu/ &
-opera https://extensions.gnome.org/extension/1036/extensions/ &
-opera https://extensions.gnome.org/extension/750/openweather/ &
-opera https://extensions.gnome.org/extension/906/sound-output-device-chooser/ &
+#-----------------------------------------------------------------------------
 
 sudo chsh $(whoami) -s  $(which zsh)
 
@@ -170,3 +163,7 @@ rm -rf fonts
 cd /tmp && wget -qO - https://github.com/nana-4/materia-theme/archive/master.tar.gz | tar xz
 cd materia-theme-master
 sudo ./install.sh
+
+#-----------------------------------------------------------------------------
+# Kitty (terminal)
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
