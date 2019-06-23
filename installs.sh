@@ -85,12 +85,15 @@ sudo apt install uudeview -y
 sudo apt install xclip -y
 sudo apt install zip -y
 sudo apt install zsh -y
+sudo apt install vlc -y
+
+sudo apt install python3-pip -y
 
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
 
-pip3  install autopep8
-pip3  install neovim
+pip3 install autopep8
+pip3 install neovim
 
 #-----------------------------------------------------------------------------
 # Copia dos .desktop files
@@ -138,7 +141,8 @@ firefox -newtab \
 -url "https://extensions.gnome.org/extension/7/removable-drive-menu/" \
 -url "https://extensions.gnome.org/extension/1036/extensions/" \
 -url "https://extensions.gnome.org/extension/750/openweather/" \
--url "https://extensions.gnome.org/extension/906/sound-output-device-chooser/"
+-url "https://extensions.gnome.org/extension/906/sound-output-device-chooser/" \
+-url "https://extensions.gnome.org/extension/1544/cast-to-tv/"
 
 #-----------------------------------------------------------------------------
 
