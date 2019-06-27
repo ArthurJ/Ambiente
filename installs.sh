@@ -180,6 +180,8 @@ sudo ./install.sh
 
 cd ~/Stuff
 
+sudo gpasswd -a $USER input
+
 git clone https://github.com/bulletmark/libinput-gestures.git
 cd libinput-gestures
 sudo make install
