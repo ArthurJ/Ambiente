@@ -87,6 +87,8 @@ sudo apt install zip -y
 sudo apt install zsh -y
 sudo apt install vlc -y
 
+sudo apt install libinput-tools
+
 sudo apt install python3-pip -y
 
 sudo apt-get autoclean -y
@@ -153,10 +155,14 @@ zsh -c 'git clone --recursive git@github.com:ArthurJ/prezto.git "${ZDOTDIR:-$HOM
 zsh -c 'setopt EXTENDED_GLOB; for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do; ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done'
 zsh -c 'cd $ZPREZTODIR'
 
+#-----------------------------------------------------------------------------
+
 git pull
 git submodule update --init --recursive
 
 cd
+
+#-----------------------------------------------------------------------------
 
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
@@ -164,10 +170,25 @@ cd fonts
 cd ..
 rm -rf fonts
 
+#-----------------------------------------------------------------------------
+
 cd /tmp && wget -qO - https://github.com/nana-4/materia-theme/archive/master.tar.gz | tar xz
 cd materia-theme-master
 sudo ./install.sh
 
 #-----------------------------------------------------------------------------
+
+cd ~/Stuff
+
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+sudo make install
+
+cp ~/Ambiente/libinput-gestures.conf ~/.config/libinput-gestures.conf
+
+libinput-gestures-setup autostart
+libinput-gestures-setup start
+
+#-----------------------------------------------------------------------------
 # Kitty (terminal)
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+# curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
