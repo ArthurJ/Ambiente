@@ -144,7 +144,8 @@ firefox -newtab \
 -url "https://extensions.gnome.org/extension/1036/extensions/" \
 -url "https://extensions.gnome.org/extension/750/openweather/" \
 -url "https://extensions.gnome.org/extension/906/sound-output-device-chooser/" \
--url "https://extensions.gnome.org/extension/1544/cast-to-tv/"
+-url "https://extensions.gnome.org/extension/1544/cast-to-tv/" \
+-url "https://extensions.gnome.org/extension/1595/nordvpn-connect/"
 
 #-----------------------------------------------------------------------------
 
