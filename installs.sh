@@ -91,6 +91,8 @@ sudo apt install libinput-tools
 
 sudo apt install python3-pip -y
 
+sudo apt install npm
+
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
 
