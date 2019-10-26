@@ -145,7 +145,13 @@ firefox -newtab \
 -url "https://extensions.gnome.org/extension/750/openweather/" \
 -url "https://extensions.gnome.org/extension/906/sound-output-device-chooser/" \
 -url "https://extensions.gnome.org/extension/1544/cast-to-tv/" \
--url "https://extensions.gnome.org/extension/1595/nordvpn-connect/"
+-url "https://extensions.gnome.org/extension/1595/nordvpn-connect/" \
+-url "https://extensions.gnome.org/extension/517/caffeine/" \
+-url "https://extensions.gnome.org/extension/779/clipboard-indicator/" \
+-url "https://extensions.gnome.org/extension/1465/desktop-icons/" \
+-url "https://extensions.gnome.org/extension/8/places-status-indicator/" \
+-url "https://extensions.gnome.org/extension/234/steal-my-focus/" \
+-url "https://extensions.gnome.org/extension/570/todotxt/" 
 
 #-----------------------------------------------------------------------------
 
