@@ -82,6 +82,7 @@ Ordem de eventos:
         `nano /etc/sudoers`
             # descomentar linha para permitir que integrantes do grupo %wheel executem comandos sudo
             # ou acrescentar linha abaixo de `root ALL=(ALL) ALL` com o nome do usuário
+            # Descomentar a linha de permissão de comandos sem senha para shutdown, reboot e pacman
         
         `nano /etc/pacman.conf`
             # descomentar a linha `[multilib]` e a liha subsequente

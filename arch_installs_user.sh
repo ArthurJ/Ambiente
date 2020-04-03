@@ -1,9 +1,18 @@
-sudo pacman -S python
+sudo pacman -S python python2 python-pip python2-pip xorg-xclipboard trash-cli otf-fira-code
+
+pip install neovim
+pip install autopep8
+pip2 install autopep8
+pip2 install neovim 
 
 echo 'setxkbmap -model abnt2 -layout br' >> .xinitrc
 echo 'exec dwm' >> .xinitrc
 
 mkdir -p ~/Stuff/Downloads
+cd ~/Stuff
+git clone --depth 1 https://github.com/cjbassi/gotop /tmp/gotop
+/tmp/gotop/scripts/download.sh
+cd -
 
 
 mkdir -p ~/.config/nvim
@@ -40,5 +49,5 @@ rm -rf fonts
 #-----------------------------------------------------------------------------
 
 echo 'if [[ "$(tty)" = "/dev/tty1" ]]; then' >> ~/.profile
-echo '    pgrep dwm || startx' >> ~/.profile
+echo '    pgrep dwm || startx &' >> ~/.profile
 echo 'fi' >> ~/.profile
