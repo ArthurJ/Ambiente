@@ -86,6 +86,9 @@ Ordem de eventos:
         
         `nano /etc/pacman.conf`
             # descomentar a linha `[multilib]` e a liha subsequente
+            # descomentar a linha Color
+        `nano /etc/pacman.d/mirroslist`
+            # Colocar os mirrors brasileiros primeiro, em ordem de proximidade
         `pacman -Syu`
 
     - Instalação do bootloader

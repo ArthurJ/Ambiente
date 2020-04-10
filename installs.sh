@@ -124,6 +124,8 @@ cp ~/Ambiente/local_bundles.vim ~/.config/nvim/
 cp ~/Ambiente/personal.vim ~/.config/nvim/
 
 echo '' >> ~/.config/nvim/init.vim
+echo 'set relativenumber' >> ~/.config/nvim/init.vim
+echo '' >> ~/.config/nvim/init.vim
 echo 'if filereadable(expand("~/personal.vim"))' >> ~/.config/nvim/init.vim
 echo '  source ~/personal.vim' >> ~/.config/nvim/init.vim
 echo 'endif' >> ~/.config/nvim/init.vim
