@@ -2,7 +2,7 @@ sudo pacman -S python python2 python-pip python2-pip
 sudo pacman -S xorg-xclipboard trash-cli otf-fira-code #ttf-inconsolata
 sudo pacman -S ranger w3m
 sudo pacman -S feh xcompmgr transset-df util-linux neofetch
-sudo pacman -S feh fish
+sudo pacman -S neofetch fish
 
 pip install neovim
 pip install autopep8
@@ -16,19 +16,21 @@ echo 'xcompmgr -c &' >> .xinitrc
 
 echo 'while true; do' >> .xinitrc
 echo '  xsetroot -name "$(date +"%F %R")"' >> .xinitrc
-echo '  sleep 1m' >> .xinitrc
+echo '  sleep 5' >> .xinitrc
 echo 'done &' >> .xinitrc
 
 echo 'exec dwm' >> .xinitrc
 
-
+#-----------------------------------------------------------------------------
 mkdir -p ~/Stuff/Downloads
-cd ~/Stuff
+#-----------------------------------------------------------------------------
+
+cd /usr/bin
 git clone --depth 1 https://github.com/cjbassi/gotop /tmp/gotop
 /tmp/gotop/scripts/download.sh
 cd -
 
-
+#-----------------------------------------------------------------------------
 mkdir -p ~/.config/nvim
 curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=javascript&langs=c&langs=elixir&langs=erlang&langs=haskell&langs=lisp&langs=lua&langs=python&langs=rust&editor=nvim' > ~/.config/nvim/init.vim
 
@@ -48,17 +50,7 @@ sudo chsh $(whoami) -s  $(which fish)
 
 curl -L https://get.oh-my.fish | fish
 
-fish -c 'omf install agnoster'
-
-#sudo chsh $(whoami) -s  $(which zsh)
-
-## ZSH MELHORADO
-#zsh -c 'git clone -b arch --recursive https://github.com/ArthurJ/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"'
-#zsh -c 'setopt EXTENDED_GLOB; for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do; ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done'
-#zsh -c 'cd $ZPREZTODIR'
-
-#git pull
-#git submodule update --init --recursive
+fish -c 'omf install lambda'
 
 cd
 #-----------------------------------------------------------------------------
