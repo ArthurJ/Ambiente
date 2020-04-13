@@ -37,6 +37,7 @@ cp ~/Ambiente/personal.vim ~/.config/nvim/
 
 echo '' >> ~/.config/nvim/init.vim
 echo 'set relativenumber' >> ~/.config/nvim/init.vim
+echo 'set clipboard+=unnamedplus' >> ~/.config/nvim/init.vim
 echo '' >> ~/.config/nvim/init.vim
 echo 'if filereadable(expand("personal.vim"))' >> ~/.config/nvim/init.vim
 echo '  source personal.vim' >> ~/.config/nvim/init.vim
@@ -94,6 +95,9 @@ echo 'fi' >> ~/.profile
 #-----------------------------------------------------------------------------
 
 # Logar automaticamente no tty2 e tty3 (que vão rodar gotop e dmesg)
+
+# Com o fish não dá pra desabilitar os sinais de saida nem de suspensão
+# Nesse caso vale criar um usuario sem permissões apenas para monitoramento
 
 sudo systemctl enable getty@tty2.service
 sudo systemctl edit getty@tty2
