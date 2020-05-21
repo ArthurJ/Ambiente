@@ -40,14 +40,16 @@ Ordem de eventos:
         `mkfs.ext4 /dev/sda3`
         `mkfs.ext4 /dev/sda4`
 
-        `mkdir -p /mnt/boot/efi`
-        `mkdir /mnt/home`
         `mount /dev/sda3 /mnt`
+
+        `mkdir -p /mnt/boot/efi`
+        `mount /dev/sda1 /mnt/boot`
+
+        `mkdir /mnt/home`
+        `mount /dev/sda4 /mnt/home`
 
     - Instalação dos pacotes *essênciais*
         `pacstrap /mnt base base-devel linux linux-firmware`
-        `mount /dev/sda4 /mnt/home`
-        `mount /dev/sda1 /mnt/boot`
         `lsblk`
 
     - Configuração de sistema
@@ -55,7 +57,7 @@ Ordem de eventos:
 
         `arch-chroot /mnt`  # IMPORTANTE: loga na máquina final
 
-        `echo KEYMAP=br-abnt2 >> /etc/vconsole.conf`    # talvez seja apenas "br" e não "br-abnt2"
+        `echo KEYMAP=br-abnt2 >> /etc/vconsole.conf`
         
         `ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime`
         `hwclock --systohc`
