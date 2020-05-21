@@ -1,3 +1,5 @@
+#git clone https://github.com/ArthurJ/Ambiente.git
+
 sudo pacman -S python python2 python-pip python2-pip 
 sudo pacman -S xterm xorg xorg-xinit xorg-xclipboard trash-cli otf-fira-code #ttf-inconsolata
 sudo pacman -S ranger w3m feh
@@ -22,9 +24,7 @@ echo 'numlockx &' >> .xinitrc
 echo 'exec spectrwm' >> .xinitrc
 
 #-----------------------------------------------------------------------------
-mkdir ~/Stuff #&& cd ~/Stuff
-#git clone https://github.com/ArthurJ/Ambiente.git
-#cd -
+mkdir ~/Stuff
 #-----------------------------------------------------------------------------
 mkdir -p ~/.config/compton
 mkdir -p ~/.config/kitty
