@@ -4,7 +4,9 @@ sudo pacman -S python python2 python-pip python2-pip
 sudo pacman -S xterm xorg xorg-xinit xorg-xclipboard trash-cli otf-fira-code #ttf-inconsolata
 sudo pacman -S ranger w3m feh
 sudo pacman -S kitty
-sudo pacman -S neofetch fish numlockx
+sudo pacman -S neofetch fish numlockx 
+sudo pacman -S spectrwm dmenu
+sudo pacman -S xmonad xmonad-contrib xmobar
 
 pip install neovim
 pip install autopep8
@@ -15,13 +17,17 @@ pip2 install neovim
 
 echo 'setxkbmap -model abnt2 -layout br' >> .xinitrc
 
-echo 'xrand --output HDMI-1 --mode 1920x1080' >> .xinitrc # rodar ANTES o xrandr para ver os modos disponíveis
-echo 'feh --no-fehbg --bg-fill $(shuf -n 1 imag.list)' >> .xinitrc # depende desse arquivo criado, talvez usar as imagens da wikipedia seja uma boa
+echo 'xrandr --output HDMI-1 --mode 1920x1080' >> .xinitrc # rodar ANTES o xrandr para ver os modos disponíveis
 
 echo 'compton --config ~/.config/compton/compton.conf &' >> ~/.xinitrc # depende da instalação do compton
 echo 'numlockx &' >> .xinitrc
 
 echo 'exec spectrwm' >> .xinitrc
+
+cp /etc/spectrwm.conf .spectrwm.conf
+
+echo 'feh --no-fehbg --bg-fill (shuf -n 1 img.list)' > feh.fish 
+##acrescentar "fish feh.sh" e "kitty" no autorun da primera workspace
 
 #-----------------------------------------------------------------------------
 mkdir ~/Stuff
@@ -85,6 +91,8 @@ echo 'if filereadable(expand("personal.vim"))' >> ~/.config/nvim/init.vim
 echo '  source personal.vim' >> ~/.config/nvim/init.vim
 echo 'endif' >> ~/.config/nvim/init.vim
 
+echo 'set -g -x EDITOR nvim' >> ~/.profile
+echo 'pgrep -x Xorg || startx &' >> ~/.profile
 #-----------------------------------------------------------------------------
 cp ~/Ambiente/personal.fish ~/.config/fish/config.d/
 
@@ -98,10 +106,6 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
-
-#-----------------------------------------------------------------------------
-
-echo 'set -g -x EDITOR nvim' >> ~/.profile
 
 #-----------------------------------------------------------------------------
 
