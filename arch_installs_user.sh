@@ -2,7 +2,7 @@
 
 sudo pacman -S python python2 python-pip python2-pip 
 sudo pacman -S xterm xorg xorg-xinit xorg-xclipboard trash-cli otf-fira-code #ttf-inconsolata
-sudo pacman -S ranger w3m feh
+sudo pacman -S ranger w3m feh python-pywal python-pyqt5 
 sudo pacman -S kitty
 sudo pacman -S neofetch fish numlockx 
 sudo pacman -S spectrwm dmenu
@@ -12,7 +12,7 @@ pip install neovim
 pip install autopep8
 pip2 install autopep8
 pip2 install neovim 
-
+pip install pyqt5 qscientilla
 
 
 echo 'setxkbmap -model abnt2 -layout br' >> .xinitrc
@@ -54,6 +54,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+yay -S autokey
 yay -S compton-tryone-git
 mkdir ~/.config/compton
 cp /etc/xdg/compton.conf.example ~/.config/compton/compton.conf
