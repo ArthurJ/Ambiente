@@ -1,18 +1,38 @@
 #git clone https://github.com/ArthurJ/Ambiente.git
 
+timedatectl set-ntp true
+
+#nmcli d wifi list
+#nmcli dev wifi connect <nome da rede> password <senha>
+#nmcli device #lista as interfaces
+#nmcli con up <nome da interface>
+
+#echo [device] >> /etc/NetworkManager/NetworkManager.conf
+#echo wifi.scan-rand-mac-address=no >> /etc/NetworkManager/NetworkManager.conf
+
+#echo [Match] >> /etc/systemd/network/25-wireless.network
+#echo Name=wl* >> /etc/systemd/network/25-wireless.network
+
 sudo pacman -S python python2 python-pip python2-pip 
-sudo pacman -S xterm xorg xorg-xinit xorg-xclipboard trash-cli otf-fira-code #ttf-inconsolata
-sudo pacman -S ranger w3m feh python-pywal python-pyqt5 
-sudo pacman -S kitty
+sudo pacman -S xterm xorg xorg-xinit trash-cli otf-fira-code #ttf-inconsolata
+sudo pacman -S ranger w3m hsetroot python-pywal 
+sudo pacman -S kitty grub-customizer
 sudo pacman -S neofetch fish numlockx 
 sudo pacman -S spectrwm dmenu
 sudo pacman -S xmonad xmonad-contrib xmobar
+
+sudo pacman -S python-pyqt5 qt5-base qt5ct python-qscintilla-qt5 
+
+sudo pacman -S alsa-oss alsa-utils
+sudo pacman -S v4l-utils
+sudo pacman -S pulseaudio-alsa pulseaudio-bluetooth bluez-utils
+systemctl enable bluetooth
 
 pip install neovim
 pip install autopep8
 pip2 install autopep8
 pip2 install neovim 
-pip install pyqt5 qscientilla
+pip install pyqt5 qscintilla
 
 
 echo 'setxkbmap -model abnt2 -layout br' >> .xinitrc
@@ -26,7 +46,7 @@ echo 'exec spectrwm' >> .xinitrc
 
 cp /etc/spectrwm.conf .spectrwm.conf
 
-echo 'feh --no-fehbg --bg-fill (shuf -n 1 img.list)' > feh.fish 
+echo 'renew_wall' > feh.fish 
 ##acrescentar "fish feh.sh" e "kitty" no autorun da primera workspace
 
 #-----------------------------------------------------------------------------
@@ -55,6 +75,8 @@ cd yay
 makepkg -si
 
 yay -S autokey
+yay -S xclip 
+yay -S discord 
 yay -S compton-tryone-git
 mkdir ~/.config/compton
 cp /etc/xdg/compton.conf.example ~/.config/compton/compton.conf
@@ -74,7 +96,7 @@ cd ~
 
 cd /usr/bin
 git clone --depth 1 https://github.com/cjbassi/gotop /tmp/gotop
-/tmp/gotop/scripts/download.sh
+sh /tmp/gotop/scripts/download.sh
 cd -
 
 #-----------------------------------------------------------------------------
@@ -97,9 +119,13 @@ echo 'pgrep -x Xorg || startx &' >> ~/.profile
 #-----------------------------------------------------------------------------
 cp ~/Ambiente/personal.fish ~/.config/fish/config.d/
 
-curl -L https://get.oh-my.fish | fish
+curl -L https://get.oh-my.fish | fish 
 
 omf install lambda
+
+
+#-----------------------------------------------------------------------------
+exec ssh-agent fish
 #-----------------------------------------------------------------------------
 
 git clone https://github.com/powerline/fonts.git --depth=1

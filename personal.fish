@@ -1,6 +1,4 @@
-neofetch
-
-fish_vi_key_bindings
+#fish_vi_key_bindings
 
 alias less='less -MN '
 alias ccat='pygmentize -g '
@@ -10,15 +8,29 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ll='ls -lahrt --color'
 alias rm='trash'
-alias cb='xclip -selection clipboard'
+alias cb='xclip -selection clipboard '
 alias vimdiff='nvim -d'
 alias vim='nvim'
+alias gotop='gotop -pasb'
 
-set -g -x STUFF "$HOME/Stuff"
-set -g -x PATH $PATH:$STUFF
+set -U -x STUFF "$HOME/Stuff"
+set -U -x PATH $PATH:$STUFF:/local/bin
+
+function renew_wall
+    set -e wallpaper 
+    set -U wallpaper (shuf -n 1 img.list) 
+    #feh --no-fehbg --bg-scale $wallpaper
+    hsetroot -cover $wallpaper
+    wal -n -i $wallpaper
+end
+
+wal -q -n -t -i $wallpaper 
+
+#pgrep -x Xorg && def_wall
 
 source ~/.profile
 
+neofetch
 
 
 #set -g -x ANACONDA_HOME "$STUFF/anaconda3"

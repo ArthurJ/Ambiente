@@ -80,6 +80,7 @@ Ordem de eventos:
 
         `passwd` # Definir senha de root
         `useradd -G wheel -s /bin/zsh -m -c "Usuário" usuário`    # adicionar usuário
+        `gpasswd -a usuario audio`
         `passwd usuário`
         `nano /etc/sudoers`
             # descomentar linha para permitir que integrantes do grupo %wheel executem comandos sudo
